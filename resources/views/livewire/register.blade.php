@@ -79,6 +79,9 @@
                 @endforeach
                 </tbody>
             </table>
+            <div class="mt-5">
+                {{ $students->links() }}
+            </div>
         </div>
     </div>
 </div>
