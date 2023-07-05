@@ -26,12 +26,12 @@ class Student extends Model
 
     public function setFirstLastNameAttribute($value)
     {
-        $this->attributes['first_last_name'] = ucfirst(mb_strtolower($value));
+        $this->attributes['first_last_name'] = mb_strtoupper(mb_strtolower($value));
     }
 
     public function setSecondLastNameAttribute($value)
     {
-        $this->attributes['second_last_name'] = ucfirst(mb_strtolower($value));
+        $this->attributes['second_last_name'] = mb_strtoupper(mb_strtolower($value));
     }
 
     public function getLastNameAttribute(): string
