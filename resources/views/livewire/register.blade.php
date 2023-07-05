@@ -81,21 +81,4 @@
             </table>
         </div>
     </div>
-    @include('livewire.modal_create')
 </div>
-
-@section('scripts')
-    <script>
-        window.addEventListener('openModalCreate', event => {
-            $('#modalCreate').modal('show').on('shown.bs.modal', function () {
-                $('#modalCreate #name').focus();
-            })
-        });
-        window.addEventListener('openModalDelete', event => {
-            $('#modalDelete').modal('show');
-        });
-        window.addEventListener('closeModalDelete', event => {
-            $("#modalDelete").modal('hide');
-        });
-    </script>
-@endsection
