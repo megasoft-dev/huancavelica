@@ -74,4 +74,21 @@ class Register extends Component
         $this->resetAttributes();
         $this->buttonCreateOrUpdate = true;
     }
+
+    public function cancelUpdate(): void
+    {
+        $this->resetAttributes();
+        $this->buttonCreateOrUpdate = true;
+    }
+
+    public function deleteModel($id)
+    {
+        $this->model = $this->model->findOrFail($id);
+        $this->model->delete();
+    }
+
+    private function resetAttributes()
+    {
+        $this->reset(['name', 'first_last_name', 'second_last_name', 'school_id']);
+    }
 }
